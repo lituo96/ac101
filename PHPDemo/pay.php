@@ -23,10 +23,10 @@
     //此处就在您服务器生成新订单，并把创建的订单号传入到下面的orderid中。
     $goodsname = "请叫我商品名称，不要超过33个中英文字";
     $orderid = "1234567890";    //每次有任何参数变化，订单号就变一个吧。
-    $uid = "";//"此处填写PaysApi的uid";
-    $token = "";//"此处填写PaysApi的Token";
-    $return_url = 'http://www.demo.com/payreturn.php';
-    $notify_url = 'http://www.demo.com/paynotify.php';
+    $uid = "4f3fc801ceb7f62ddd86545f";//"此处填写PaysApi的uid";
+    $token = "b2177bf0059c7114278b328edb51479c";//"此处填写PaysApi的Token";
+    $return_url = '/PHPDemo/payreturn.php';
+    $notify_url = '/PHPDemo/paynotify.php';
     
     $key = md5($goodsname. $istype . $notify_url . $orderid . $orderuid . $price . $return_url . $token . $uid);
     //经常遇到有研发问为啥key值返回错误，大多数原因：1.参数的排列顺序不对；2.上面的参数少传了，但是这里的key值又带进去计算了，导致服务端key算出来和你的不一样。
